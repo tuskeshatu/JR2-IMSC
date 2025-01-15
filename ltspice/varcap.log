@@ -1,0 +1,24 @@
+Stray ".ends" card: .ends
+WARNING: bad call of user defined function in: "c0*(1+[c*]sin(omeg*time)"
+Questionable use of curly braces in "b§hvolt + - v=(sdt(i(hvolt))+{{vc0}}*({c0}*(1+{c}*sin({omeg}*(0))))/({c0}*(1+{c}*sin({omeg}*time))"
+    Error: undefined symbol in: "[vc0]"
+Questionable use of curly braces in "b§hvolt + - v=(sdt(i(hvolt))+({vc0})*({c0}*(1+{c}*sin({omeg}*(0))))/({c0}*(1+{c}*sin({omeg}*time))"
+    Error: undefined symbol in: "[vc0]"
+Questionable use of curly braces in "b§hvolt + - v=(sdt(i(hvolt))+((vc0))*({c0}*(1+{c}*sin({omeg}*(0))))/({c0}*(1+{c}*sin({omeg}*time))"
+    Error: undefined symbol in: "[c0]"
+Questionable use of curly braces in "b§hvolt + - v=(sdt(i(hvolt))+((vc0))*((c0)*(1+{c}*sin({omeg}*(0))))/({c0}*(1+{c}*sin({omeg}*time))"
+    Error: bad call of user defined function in: "[c]"
+Questionable use of curly braces in "b§hvolt + - v=(sdt(i(hvolt))+((vc0))*((c0)*(1+(c)*sin({omeg}*(0))))/({c0}*(1+{c}*sin({omeg}*time))"
+    Error: undefined symbol in: "[omeg]"
+Questionable use of curly braces in "b§hvolt + - v=(sdt(i(hvolt))+((vc0))*((c0)*(1+(c)*sin((omeg)*(0))))/({c0}*(1+{c}*sin({omeg}*time))"
+    Error: undefined symbol in: "[c0]"
+Questionable use of curly braces in "b§hvolt + - v=(sdt(i(hvolt))+((vc0))*((c0)*(1+(c)*sin((omeg)*(0))))/((c0)*(1+{c}*sin({omeg}*time))"
+    Error: bad call of user defined function in: "[c]"
+Questionable use of curly braces in "b§hvolt + - v=(sdt(i(hvolt))+((vc0))*((c0)*(1+(c)*sin((omeg)*(0))))/((c0)*(1+(c)*sin({omeg}*time))"
+    Error: undefined symbol in: "[omeg]"
+LTspice 24.0.11 for Windows
+Circuit: .subckt capacitor + - params: VC0=0 C0=1n c=0.1 omeg=0.0632G
+Start Time: Wed Jan 15 18:52:40 2025
+Fatal Error: hvolt:
+-- Syntax Error --
+(sdt(i(hvolt))+((vc0))*((c0)*(1+(c)*sin((omeg)*(0))))/((c0)*(1+(c)*sin((omeg)*time))«»

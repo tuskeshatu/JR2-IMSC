@@ -1,0 +1,4 @@
+.subckt capacitor + - params: VC0=0 C0=1n ampl=0.1 omeg=0.0632G
+.func C(time) {C0*(1+ampl*sin(omeg*time))}
+hvolt + - value={(sdt(I(hvolt))+VC0*C(0))/C(time)}
+.ends
