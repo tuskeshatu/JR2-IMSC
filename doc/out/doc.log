@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Built by MSYS2 project) (preloaded format=pdflatex 2025.1.22)  23 JAN 2025 01:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Built by MSYS2 project) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 16:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -88,7 +88,16 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (c:/msys64/ucrt64/share/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+) (c:/msys64/ucrt64/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (c:/msys64/ucrt64/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/msys64/ucrt64/share/texmf-dist/tex/latex/circuitikz/circuitikz.sty
 Package: circuitikz 2023/02/11{} The CircuiTikz circuit drawing package version 1.6.1
  (c:/msys64/ucrt64/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/msys64/ucrt64/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/msys64/ucrt64/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/msys64/ucrt64/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks21
@@ -446,7 +455,8 @@ LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen286
  (c:/msys64/ucrt64/share/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (c:/msys64/ucrt64/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+
+(c:/msys64/ucrt64/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count310
@@ -468,8 +478,7 @@ package with kernel methods
 \c@Hfootnote=\count313
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(c:/msys64/ucrt64/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (c:/msys64/ucrt64/share/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
  (c:/msys64/ucrt64/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
@@ -521,32 +530,36 @@ Package babel Info: Importing font and identification data for hungarian
 ) (c:/msys64/ucrt64/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 61.
+Package hyperref Info: Option `colorlinks' set `true' on input line 62.
  (c:/msys64/ucrt64/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count323
 \l__pdf_internal_box=\box69
-) (out/doc.aux)
+) (out/doc.aux
+
+LaTeX Warning: Label `avlna' multiply defined.
+
+)
 \openout1 = `doc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
  (c:/msys64/ucrt64/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count324
@@ -573,7 +586,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count330
-Package hyperref Info: Link coloring ON on input line 63.
+Package hyperref Info: Link coloring ON on input line 64.
  (out/doc.out) (out/doc.out)
 \@outlinefile=\write4
 \openout4 = `doc.out'.
@@ -617,20 +630,28 @@ Package hyperref Info: Link coloring ON on input line 63.
 LaTeX Info: Redefining \cal on input line 497.
 LaTeX Info: Redefining \mit on input line 498.
 )
-<figures/bme_logo_nagy_bordo.jpg, id=19, 710.655pt x 200.6697pt>
+<figures/bme_logo_nagy_bordo.jpg, id=39, 710.655pt x 200.6697pt>
 File: figures/bme_logo_nagy_bordo.jpg Graphic file (type jpg)
 <use figures/bme_logo_nagy_bordo.jpg>
-Package pdftex.def Info: figures/bme_logo_nagy_bordo.jpg  used on input line 70.
+Package pdftex.def Info: figures/bme_logo_nagy_bordo.jpg  used on input line 71.
 (pdftex.def)             Requested size: 295.90588pt x 83.55806pt.
-<figures/hvt-logo.png, id=20, 238.8925pt x 100.375pt>
+<figures/hvt-logo.png, id=40, 238.8925pt x 100.375pt>
 File: figures/hvt-logo.png Graphic file (type png)
 <use figures/hvt-logo.png>
-Package pdftex.def Info: figures/hvt-logo.png  used on input line 73.
+Package pdftex.def Info: figures/hvt-logo.png  used on input line 74.
 (pdftex.def)             Requested size: 91.04742pt x 38.25468pt.
  [1
 
 
-{c:/msys64/ucrt64/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{c:/msys64/ucrt64/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./figures/bme_logo_nagy_bordo.jpg> <./figures/hvt-logo.png>] (out/doc.toc)
+{c:/msys64/ucrt64/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{c:/msys64/ucrt64/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./figures/bme_logo_nagy_bordo.jpg> <./figures/hvt-logo.png>] (out/doc.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (c:/msys64/ucrt64/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (c:/msys64/ucrt64/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write5
 \openout5 = `doc.toc'.
 
@@ -638,37 +659,92 @@ Package pdftex.def Info: figures/hvt-logo.png  used on input line 73.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.90 \newpage
-              [1]
-Overfull \hbox (0.47612pt too wide) in paragraph at lines 98--101
-[]\T1/cmr/m/n/10.95 Ebben a fel-adat-ban egy elektromos-pontosabban egy so-ros RLC kör-parametrikus
- []
-
-[2]
+l.91 \newpage
+              [1] [2]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 187.
+(amsmath)                trying to recover with `aligned' on input line 188.
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 230.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 231.
 (c:/msys64/ucrt64/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [3{c:/msys64/ucrt64/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4] (out/doc.aux)
+) [3{c:/msys64/ucrt64/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<figures/0.png, id=117, 362.3136pt x 311.2428pt>
+File: figures/0.png Graphic file (type png)
+<use figures/0.png>
+Package pdftex.def Info: figures/0.png  used on input line 275.
+(pdftex.def)             Requested size: 227.62206pt x 195.5331pt.
+<figures/1.png, id=118, 362.3136pt x 311.2428pt>
+File: figures/1.png Graphic file (type png)
+<use figures/1.png>
+Package pdftex.def Info: figures/1.png  used on input line 281.
+(pdftex.def)             Requested size: 227.62206pt x 195.5331pt.
+<figures/2.png, id=119, 362.3136pt x 311.2428pt>
+File: figures/2.png Graphic file (type png)
+<use figures/2.png>
+Package pdftex.def Info: figures/2.png  used on input line 288.
+(pdftex.def)             Requested size: 227.62206pt x 195.5331pt.
+<figures/3.png, id=120, 362.3136pt x 310.761pt>
+File: figures/3.png Graphic file (type png)
+<use figures/3.png>
+Package pdftex.def Info: figures/3.png  used on input line 294.
+(pdftex.def)             Requested size: 227.62206pt x 195.23041pt.
+ [4]
+<figures/ctplot.png, id=140, 1695.936pt x 709.6914pt>
+File: figures/ctplot.png Graphic file (type png)
+<use figures/ctplot.png>
+Package pdftex.def Info: figures/ctplot.png  used on input line 302.
+(pdftex.def)             Requested size: 364.19667pt x 152.39658pt.
+ [5 <./figures/0.png (PNG copy)> <./figures/1.png (PNG copy)> <./figures/2.png (PNG copy)> <./figures/3.png (PNG copy)> <./figures/ctplot.png (PNG copy)>]
+<figures/envelope.png, id=155, 1666.5462pt x 725.109pt>
+File: figures/envelope.png Graphic file (type png)
+<use figures/envelope.png>
+Package pdftex.def Info: figures/envelope.png  used on input line 328.
+(pdftex.def)             Requested size: 364.19667pt x 158.45123pt.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 347.
+
+[6 <./figures/envelope.png (PNG copy)>]
+<figures/ltspicecircuit.png, id=171, 761.84625pt x 431.36156pt>
+File: figures/ltspicecircuit.png Graphic file (type png)
+<use figures/ltspicecircuit.png>
+Package pdftex.def Info: figures/ltspicecircuit.png  used on input line 358.
+(pdftex.def)             Requested size: 273.14923pt x 154.65816pt.
+File: figures/2.png Graphic file (type png)
+<use figures/2.png>
+Package pdftex.def Info: figures/2.png  used on input line 376.
+(pdftex.def)             Requested size: 227.62206pt x 195.5331pt.
+<figures/2ltspice.png, id=172, 389.20406pt x 306.39468pt>
+File: figures/2ltspice.png Graphic file (type png)
+<use figures/2ltspice.png>
+Package pdftex.def Info: figures/2ltspice.png  used on input line 380.
+(pdftex.def)             Requested size: 227.62206pt x 179.19576pt.
+ [7 <./figures/ltspicecircuit.png> <./figures/2ltspice.png>] (out/doc.lof)
+\tf@lof=\write6
+\openout6 = `doc.lof'.
+
+ (out/doc.bbl) [8] (out/doc.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `doc.out' has not changed.
-(rerunfilecheck)             Checksum: B3F44D11AB1847E8720955EA91572891;901.
+(rerunfilecheck)             Checksum: 0B73AF70063A2EBE12BF258317B67308;1462.
  ) 
 Here is how much of TeX's memory you used:
- 41108 strings out of 476017
- 953489 string characters out of 5790271
- 2180660 words of memory out of 5000000
- 61073 multiletter control sequences out of 15000+600000
- 524674 words of font info for 57 fonts, out of 8000000 for 9000
+ 41796 strings out of 476017
+ 962138 string characters out of 5790271
+ 2179660 words of memory out of 5000000
+ 61691 multiletter control sequences out of 15000+600000
+ 531242 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,16n,118p,545b,1696s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbi1728.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on out/doc.pdf (5 pages, 960497 bytes).
+ 117i,16n,118p,463b,1696s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbi1728.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/msys64/ucrt64/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on out/doc.pdf (9 pages, 1626211 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
- 47 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

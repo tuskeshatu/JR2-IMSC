@@ -1,0 +1,9 @@
+\select@language {hungarian} \contentsline {figure}{\numberline {1}{\ignorespaces RLC soros rezgőkör.}}{2}{figure.1}%
+\select@language {hungarian} \contentsline {figure}{\numberline {2}{\ignorespaces $u_C(t)$ konstans $C$ esetén ($\omega _p = 0$).}}{5}{figure.2}%
+\select@language {hungarian} \contentsline {figure}{\numberline {3}{\ignorespaces $u_C(t)$ $\omega _p = \omega _0$ esetén.}}{5}{figure.3}%
+\select@language {hungarian} \contentsline {figure}{\numberline {4}{\ignorespaces $u_C(t)$ $\omega _p = 2\omega _0$ esetén.}}{5}{figure.4}%
+\select@language {hungarian} \contentsline {figure}{\numberline {5}{\ignorespaces $u_C(t)$ $\omega _p = 3\omega _0$ esetén.}}{5}{figure.5}%
+\select@language {hungarian} \contentsline {figure}{\numberline {6}{\ignorespaces A kondenzátor kapacitásának időfüggvénye $C(t)$ $\omega _p = 2\omega _0$ esetén.}}{5}{figure.6}%
+\select@language {hungarian} \contentsline {figure}{\numberline {7}{\ignorespaces Hosszabb szimuláció (100 ms) $\omega _p = 2\omega _0$ esetén.}}{6}{figure.7}%
+\select@language {hungarian} \contentsline {figure}{\numberline {8}{\ignorespaces LTSpice kapcsolási rajz és használt paraméterek.}}{7}{figure.8}%
+\select@language {hungarian} \contentsline {figure}{\numberline {9}{\ignorespaces MATLAB szimuláció (bal) és LTSpice validáció (jobb).}}{7}{figure.9}%

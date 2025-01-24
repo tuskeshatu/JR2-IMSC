@@ -1,6 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage{t1enc}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage[european]{circuitikz}
 \usepackage{listings}
 \usepackage{color}
@@ -68,7 +69,7 @@
     \vspace*{\fill}
     \textbf{\Huge Parametrikus oszcillátor szimulációja}\\[2cm]
     \includegraphics[width=0.65\textwidth]{figures/bme_logo_nagy_bordo.jpg}\\[1cm]
-    \textbf{\Large Budapest Műszaki és Gazdaságtudományi Egyetem}\\[0.25cm]
+    \textbf{\Large Budapesti Műszaki és Gazdaságtudományi Egyetem}\\[0.25cm]
     \Large Villamosmérnöki és Informatikai Kar\\[1cm]
     \includegraphics[width=0.2\textwidth]{figures/hvt-logo.png}\\[0.25cm]
     \Large Szélessávú Hírközlés és Villamosságtan Tanszék\\[2cm]
@@ -95,7 +96,7 @@
     időben periodikus változásra kényszerítjük, amely önmagában magára hagyva is periodikus természetű viselkedést mutat, akkor érdekes jelenségeket figyelhetünk meg
     többek között a rendszer összenrgiájával és az oszcillációjának amplitúdójával kapcsolatban.
 
-    Ebben a feladatban egy elektromos-pontosabban egy soros RLC kör-parametrikus oszcillátor szimulációját mutatom be egy általam MATLAB környezetben készített
+    Ebben a feladatban egy elektromos parametrikus oszcillátor, pontosabban egy soros RLC kör szimulációját mutatom be egy általam MATLAB környezetben készített
     szimuláció segítségével. A szimuláció célja, hogy megvizsgálja és szemléletessé tegye az absztrakt rendszer viselkedését különböző paraméterek és kezdeti feltételek
     mellett. Az eredményeket LTspice szimulációk segítségével validáltam.
 \end{abstract}
@@ -128,7 +129,7 @@
         \draw (0,0) -- (8,0);
 
         % Voltage arrows
-        \draw[->, thick, >=latex] (3,1.5) -- (5,1.5) node[midway, below] {$i_L$};
+        \draw[->, thick, -{Latex[open]}] (3,1.5) -- (5,1.5) node[midway, below] {$i_L$};
         \draw[->, thick, >=latex] (5.5,1.5) -- (7.5,1.5) node[midway, below] {$u_C$};
 
     \end{tikzpicture}
@@ -167,8 +168,8 @@ Ennek megfelelően az időfüggő kapacitású kondenzátor karakterisztikája a
 
 \pagebreak
 
-Ezzel és a hagyományos (konstans induktivitású) tekercs karakterisztikával ($u_L = L \cdot i_L'$) már a $\Phi_1$-es és a $\Phi_2$-es potenciálú
-csomópontra (\ref{fig:rlc}) felírjuk a csomóponti egyenleteket:
+Ezzel és a hagyományos (konstans induktivitású) tekercs karakterisztikával ($u_L = L i_L'$) már a $\Phi_1$-es és a $\Phi_2$-es potenciálú
+csomópontra (\ref{fig:rlc}) felírhatjuk a csomóponti egyenleteket:
 
 \begin{equation}
     \begin{split}
@@ -197,7 +198,7 @@ Az előállított differenciálegyenlet rendszert MATLAB környezetben könnyed�
 
 Először a kódban definiálom az ellenállás $R$ [Ohm], a tekercs induktivitás $L$ [Henry], az alapkapacitás $C_0$ [Farad],
 a kondenzátor kezdőfeszültség $U_0$ [Volt] és a kapacitás pumpálás amplitúdó $c$ (esetlegesen a körfrekvencia $\omega_p$ [rad/s]) értékeket.
-Ezekből a kód kiszámítja az $\omega_0 = 1 / \sqrt{L \cdot C_0}$ képlet alapján a soros RLC kör sajátfrekvenciáját és alapesetben beállítja a kapacitáspumpálás körfrekvenciáját
+Ezekből a kód kiszámítja az $\omega_0 = 1 / \sqrt{L C_0}$ képlet alapján a soros RLC kör sajátfrekvenciáját és alapesetben beállítja a kapacitáspumpálás körfrekvenciáját
 ennek a kétszeresére $\omega_p = 2 \omega_0$:
 
 \begin{lstlisting}
@@ -249,9 +250,142 @@ alapján a beépített funkciója gyakran túl nagy lépésközt választ, ezér
 hoszabb időtartamú stabilitása miatt (alapesetben ez 1 ns-ra van választva), illetve hasznos és érdekes látni, ahogy a solver folyamatában oldja az egyenleteket,
 így a \texttt{'Stats', 'on', 'OutputFcn', @odeplot} opciók is alapesetben definiálva lettek (természetesen ezek nem feltétlenül szükségesek a szimuláció működéséhez).
 
-A végső eredmény, amely a \texttt{[t, x]} vektor(ok)-ban vannak tárolva ki is lesznek plotolva.
+A végső eredmény, amely a \texttt{[t, x]} vektor(ok)-ban vannak tárolva ki is lesz plotolva.
 
-\section{Elemzés a szimuláció segítségével: a körfrekvenciák és a működés viszonya}
+\section{A körfrekvenciák és a működés viszonya}
 
+\subsection{Szimuláció}
+A szimuláció elsődleges célja a töltéspumpálás $C(t)$ $\omega_p$ és a rezgőkör (konstans $C_0$ kapacitás esetén) $\omega_0$ sajátfrekvenciája közötti viszonyának és a
+kialakuó oszcilláció viselkedésének vizsgálata.
+
+Vizsgálataim a kondenzátor feszültségének időfüggvényére fókuszáltak. A szimulációt az alábbi paraméterekkel végeztem el 4 különböző $\omega_p / \omega_0$ arányra:
+
+\begin{itemize}
+    \item $R = 5 \Omega$
+    \item $L = 10 mH$
+    \item $C_0 = 10 \mu F$
+    \item $c = 0.4$
+    \item $u_C(0) = 5 V$
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/0.png}
+        \caption{$u_C(t)$ konstans $C$ esetén ($\omega_p = 0$).}
+        \label{fig:constC}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/1.png}
+        \caption{$u_C(t)$ $\omega_p = \omega_0$ esetén.}
+        \label{fig:omega0}
+    \end{minipage}
+    \vfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/2.png}
+        \caption{$u_C(t)$ $\omega_p = 2\omega_0$ esetén.}
+        \label{fig:2omega0}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/3.png}
+        \caption{$u_C(t)$ $\omega_p = 3\omega_0$ esetén.}
+        \label{fig:3omega0}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/ctplot.png}
+    \caption{A kondenzátor kapacitásának időfüggvénye $C(t)$ $\omega_p = 2\omega_0$ esetén.}
+    \label{fig:ctplot}
+\end{figure}
+
+\subsection{Eredmények}
+
+\subsubsection{Megfigyelések}
+
+A szimulációs eredmények érdekes jelenségeket mutatnak a különböző $\omega_p / \omega_0$ arányok esetén.
+
+\begin{itemize}
+    \item \textbf{Konstans kapacitás ($\omega_p = 0$):} A \ref{fig:constC}. ábrán látható, hogy a kondenzátor feszültsége csillapodó rezgést mutat, amely a klasszikus RLC kör viselkedésének felel meg.
+    \item $\boldsymbol{\omega_p = \omega_0}$: A \ref{fig:omega0}. ábrán a kapacitás időbeli változásától függetlenül hasonló jelenséget figyelhetünk meg.
+    \item $\boldsymbol{\omega_p = 2\omega_0}$: A \ref{fig:2omega0}. ábrán látható, hogy a kondenzátor feszültsége először csökken, majd \textbf{exponenciális növekedésnek indul}.
+    \item $\boldsymbol{\omega_p = 3\omega_0}$: Az \ref{fig:3omega0}. ábrán látható, hogy a kondenzátor feszültsége ismét csillapodó rezgést mutat, hasonlóan a konstans kapacitás esetéhez.
+\end{itemize}
+
+\subsubsection{Parametrikus rezonancia, gerjesztési feltételek}
+
+A jelenség, amit a \ref{fig:2omega0}. ábrán megfigyelhetünk egyértelműen magyarázható. Eleinte a kondenzátor feszültségének
+beesését figyelhetjük meg (~7 ms-ig), ami a kezdőfeltételeknek köszönhető. Mivel a tekercs energiamentes bekapcsoláskor ($i_L(0) = 0$),
+ezért a kondenzátorban tárolt energia egyy része átalakul a tekercsben mágneses térben tárolt energiává.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/envelope.png}
+    \caption{Hosszabb szimuláció (100 ms) $\omega_p = 2\omega_0$ esetén.}
+    \label{fig:envelope}
+\end{figure}
+
+Az utána következő ($t \gtrapprox 7 ms$) időtartományban a kondenzátor feszültsége exponenciális növekedésnek indul (\ref{fig:envelope}. ábra). Ebből egyértelműen
+látszik, hogy a rendszer teljes energiája növekszik. A többi szimulációból egyértelműen látszik az is, hogy ahhoz, hogy többlet energiával lássuk el a rendszert (többel, mint ami
+a csillapító ellenálláson disszipálódik), bizonyos feltételeknek meg kell felelnie a paraméter gerjesztésének.
+
+Az egyik ilyen feltétel az a körfrekvenciák arányára vonatkozik. A legerősebb parametrikus gerjesztés (vagyis a rendszer legtöbb többlet energiával való ellátása) akkor lehetséges,
+ha a paraméter modulációjának két teljes periódusa lezajlik az alap rendszer rezgéseinek 1 periódusa alatt \cite{butikov2004parametric}. Ebből megfogalmazhatunk a körfrekvenciák arányára is egy feltételt:
+
+\begin{equation}
+    \boxed
+    {
+        \begin{split}
+                T_p = nT_0/2 \\
+                \omega_p = 2\omega_0/n
+        \end{split}
+    }
+    \label{avlna}
+\end{equation}
+, ahol $n = 1, 2, \dots$ és a legerősebb erősítés $n = 1$ esetén van, \textbf{vagyis $\boldsymbol{\omega_p = 2\omega_0}$}.
+
+További feltételek fogalmazhatók meg a paraméter gerjesztésének $c$ amplitúdójára (többek között az $\alpha = \frac{R}{2L}$ csillapítási tényező és az ún. $Q$ minőségi tényező segítségével) és fázisára is , de ezek a feladat vizsgálati körén kívül esnek.
+
+\subsubsection{Validáció}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/ltspicecircuit.png}
+    \caption{LTSpice kapcsolási rajz és használt paraméterek.}
+    \label{fig:ltspicecircuit}
+\end{figure}
+
+Az eredményeimet és a MATLAB szimuláció helyességét egy LTSpice szimulációval validáltam. A változó kapacitású kondenzátort az alábbi subcircuit-tel valósítottam meg:
+
+\begin{lstlisting}
+.subckt capacitor + - params: VC0=0 C0=1n ampl=0.1 omeg=0.0632G
+.func C(time) {C0*(1+ampl*sin(omeg*time))}
+hvolt + - value={(sdt(I(hvolt))+VC0*C(0))/C(time)}
+.ends
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/2.png}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/2ltspice.png}
+    \end{minipage}
+    \caption{MATLAB szimuláció (bal) és LTSpice validáció (jobb).}
+    \label{fig:validation}
+\end{figure}
+
+\newpage
+\listoffigures
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document}
